@@ -11,4 +11,4 @@ python manage.py populate_db
 python manage.py runserver
 
 
-test app: telmojsneves.com
+test app: telmojsneves.com:8080
