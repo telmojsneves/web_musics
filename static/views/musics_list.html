@@ -1,0 +1,43 @@
+<div class="middlecenter">
+
+    <table class="table table-hover table-responsive">
+        <thead>
+            <tr>
+
+                <th>Title</th>
+                <th>Artist</th>
+                <th>Album</th>
+                <th>Favourite</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="music in musics track by music.id">
+
+                <td>{$ music.title $}</td>
+                <td>{$ music.artist $}</td>
+                <td>{$ music.album $}</td>
+                <td><input type="checkbox" ng-model="music.checked" ng-change = "checkedBox(music)"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="text-center">
+        <uib-pagination
+            boundary-links="false"
+            direction-links="true"
+            total-items="totalItems"
+            ng-model="currentPage"
+            items-per-page="itemsPerPage"
+            ng-change="musicPageChanged()"
+            class="pagination-sm"
+            max-size=5>
+        </uib-pagination>
+
+    </div>
+
+    <button ng-click="addMusic()" type="button" class="btn btn-primary btn-fab" style="float:right" ng-model="singleModel" uib-btn-checkbox>
+        <i class="material-icons">add</i>
+    </button>
+
+</div>

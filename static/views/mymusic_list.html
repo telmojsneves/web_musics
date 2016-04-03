@@ -1,0 +1,24 @@
+<div class="middlecenter">
+
+    <table class="table table-hover table-responsive">
+        <thead>
+            <tr>
+
+                <th>Title</th>
+                <th>Artist</th>
+                <th>Album</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="music in musics track by music.id">
+
+                <td>{$ music.title $}</td>
+                <td>{$ music.artist $}</td>
+                <td>{$ music.album $}</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</div>
